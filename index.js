@@ -8,7 +8,7 @@ console.log(mainTitle);
 // Select all paragraph elements and change the content of the second paragraph to "This paragraph has been changed."
 
 let secondParagraph = document.getElementsByTagName("p")[1];
-secondParagraph.innerHTML = "<p>This paragraph has been changed.</p>";
+secondParagraph.textContent = "<p>This paragraph has been changed.</p>";
 
 // EXERCISE 3: Changing CSS Styles
 // Select the first list item and change its text color to red.
@@ -32,13 +32,14 @@ setTimeout(function () {
 
 let newItem4 = document.createElement("li");
 newItem4.textContent = "Item 4";
-let ul = document.getElementById("list");
-ul.appendChild(newItem4);
+
+let list = document.getElementById("list");
+list.appendChild(newItem4);
 
 // EXERCISE 6: Removing Elements
 // Remove the last list item from the unordered list
 
-let lastItem = document.getElementsByTagName("li")[3];
+let lastItem = list.lastElementChild;
 lastItem.remove();
 
 // EXERCISE 7: Handling Events
